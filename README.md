@@ -2,7 +2,7 @@
 ## Storing data with MongoDB
 
 
-With this walkthrough you will learn and understand how you can connect to a mongoDB database via Express and Node.js to understand how data is stored in the Backend.
+With this walkthrough you will learn and understand how you can connect to a mongoDB database via an express server and Node.js to understand how data is stored in the Backend.
 
 The following files are already provided to ensure setup is clean and easy:
 * `node_modules/`
