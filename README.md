@@ -4,12 +4,12 @@
 
 With this walkthrough you will learn and understand how you can connect to a mongoDB database via an express server and Node.js to understand how data is stored in the Backend.
 
-The following files are already provided to ensure setup is clean and easy:
+The following files are already provided to ensure setup is clean and easy and all modules/dependencies should already be installed:
 * `node_modules/`
 * `package-lock.json`
 * `package.json`
 
-We will walkthrough the _server.js_ file to create, setup, and store data in your database.
+We will edit the _server.js_ file just a little bit to establish a connection to your database.
 
 ### A little bit about databases!:
 
