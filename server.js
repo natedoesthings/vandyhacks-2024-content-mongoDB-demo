@@ -18,48 +18,55 @@ app.listen(port, async () => {
 });
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * Mongoose Connection and reading/writing data!
+ */
+/////////////////////////////////////////////////////////////////////////////////////////////
 
-// // Retrieving from mongoose dependency
-// const mongoose = require('mongoose')
+// Retrieving from mongoose dependency
+const mongoose = require('mongoose')
 
-// const URL = 'INSERT URL HERE'
-// mongoose.connect(URL); // establishes connection to deployment
+const URL = 'INSERT URL HERE'
+mongoose.connect(URL); // establishes connection to deployment
+
+
 
 // Structure of our Car Schema using mongoose
-// const carSchema = new mongoose.Schema({
-//   type: String,
-//   make: String,
-//   model: Number,
-//   color: String,
-//   fourWheelDrive: Boolean,
-//   used: Boolean
-// })
+const carSchema = new mongoose.Schema({
+  type: String,
+  make: String,
+  model: Number,
+  color: String,
+  fourWheelDrive: Boolean,
+  used: Boolean
+})
 
 // Creates a reusable model out of the schema
-// const Car = mongoose.model("Car", carSchema);
+const Car = mongoose.model("Car", carSchema);
 
 
-// app.get('/api/test', async (req, res) => {
-//   // Example Car
-//   const car = new Car({
-//     type: "Honda",
-//     make: "Civic",
-//     model: 2012,
-//     color: "Grey",
-//     fourWheelDrive: false,
-//     used: true
-//   })
+app.get('/api/test', async (req, res) => {
+  // Example Car
+  const car = new Car({
+    type: "Honda",
+    make: "Civic",
+    model: 2012,
+    color: "Grey",
+    fourWheelDrive: false,
+    used: true
+  })
 
-//   // save into database
-//   const printCar = await car.save();
+  // save into database
+  const printCar = await car.save();
 
-//   res.json(printCar)
+  res.send(car.type + " " + car.make + " has been successfully stored in Database!")
 
-// }) 
+}) 
 
-// app.get('/api/test/all', async (req, res)=> {
-//   // use .find({}) to find all cars
-//   const cars = await Car.find({});
-//   res.json(cars);
-// })
+app.get('/api/test/all', async (req, res)=> {
+  // use .find({}) to find all cars
+  const cars = await Car.find({});
+  res.json(cars);
+})
 
