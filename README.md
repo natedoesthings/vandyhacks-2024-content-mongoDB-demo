@@ -9,7 +9,7 @@ The following files are already provided to ensure setup is clean and easy:
 * `package-lock.json`
 * `package.json`
 
-We will walkthrough the _server.js_ file to create, setup, and store data in your database.
+We will edit the _server.js_ file just a little bit to establish a connection to your database.
 
 ### A little bit about databases!:
 
