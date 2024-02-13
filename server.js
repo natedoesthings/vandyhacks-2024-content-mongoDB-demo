@@ -8,6 +8,17 @@ app.use(cors())
 const port = 3000; // http:/localhost:3000/
 
 
+
+app.get('/',  (req, res) => {
+  res.send("Welcome to the Server!")
+});
+
+app.listen(port, async () => {
+  console.log(`Server is running on port ${port}`);
+});
+
+
+
 // // Retrieving from mongoose dependency
 // const mongoose = require('mongoose')
 
@@ -52,11 +63,3 @@ const port = 3000; // http:/localhost:3000/
 //   res.json(cars);
 // })
 
-
-app.get('/',  (req, res) => {
-  res.send("Welcome to the Server!")
-});
-
-app.listen(port, async () => {
-  console.log(`Server is running on port ${port}`);
-});
